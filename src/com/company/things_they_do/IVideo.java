@@ -1,6 +1,6 @@
 package com.company.things_they_do;
 
-import com.company.DTO.*;
+import com.company.model.*;
 
 import java.util.List;
 

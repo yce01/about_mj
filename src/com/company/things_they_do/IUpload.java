@@ -1,8 +1,8 @@
 package com.company.things_they_do;
 
-import com.company.DTO.Music;
-import com.company.DTO.Score;
-import com.company.DTO.Video;
+import com.company.model.Music;
+import com.company.model.Score;
+import com.company.model.Video;
 
 public interface IUpload {
     void upload(Video video);

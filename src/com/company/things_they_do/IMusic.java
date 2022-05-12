@@ -1,9 +1,9 @@
 package com.company.things_they_do;
 
-import com.company.DTO.Inst;
-import com.company.DTO.Lyric;
-import com.company.DTO.Music;
-import com.company.DTO.Voice;
+import com.company.model.Inst;
+import com.company.model.Lyric;
+import com.company.model.Music;
+import com.company.model.Voice;
 
 public interface IMusic {
     Music compose();

@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.DTO.*;
-import com.company.Teams.*;
+import com.company.model.*;
+import com.company.teams.*;
 
 import java.util.*;
 
@@ -29,27 +29,18 @@ public class Main {
 
             Scanner scanTeamIn = new Scanner(System.in);
             System.out.println("어느 팀의 업무를 알고 싶으신가요?");
-            String printTeamIn = scanner.next();
-            if(Objects.equals(printTeamIn, "국장님")){
-                main.whatDirectorDoes();
-            }else if(Objects.equals(printTeamIn, "제작1팀")){
-                main.whatProduction1Does();
-            }else if(Objects.equals(printTeamIn, "제작2팀")){
-                main.whatProduction2Does();
-            }else if(Objects.equals(printTeamIn, "제작3팀")){
-                main.whatProduction3Does();
-            }else if(Objects.equals(printTeamIn, "제작4팀")){
-                main.whatProduction4Does();
-            }else if(Objects.equals(printTeamIn, "음악팀")){
-                main.whatTeamMusicDoes();
-            }else if(Objects.equals(printTeamIn, "경영지원팀")){
-                main.whatManagementSupportDoes();
-            }else if(Objects.equals(printTeamIn, "팜키친")){
-                main.whatPalmKitchenDoes();
-            }else if(Objects.equals(printTeamIn, "3D팀")){
-                main.what3DDoes();
-            }else if(Objects.equals(printTeamIn, "개발팀")){
-                main.whatDevDoes();
+            String printTeamIn = scanTeamIn.next();
+            switch (printTeamIn) {
+                case "국장님" -> main.whatDirectorDoes();
+                case "제작1팀" -> main.whatProduction1Does();
+                case "제작2팀" -> main.whatProduction2Does();
+                case "제작3팀" -> main.whatProduction3Does();
+                case "제작4팀" -> main.whatProduction4Does();
+                case "음악팀" -> main.whatTeamMusicDoes();
+                case "경영지원팀" -> main.whatManagementSupportDoes();
+                case "팜키친" -> main.whatPalmKitchenDoes();
+                case "3D팀" -> main.what3DDoes();
+                case "개발팀" -> main.whatDevDoes();
             }
         } else if((Objects.equals(inout, "외부팀"))){
             String[] out = {"아나운서부", "성우부", "아웃소싱팀"};
@@ -59,12 +50,10 @@ public class Main {
             Scanner scanTeamOut = new Scanner(System.in);
             System.out.println("어느 팀의 업무를 알고 싶으신가요?");
             String printTeamOut = scanTeamOut.next();
-            if(Objects.equals(printTeamOut, "아나운서부")){
-                main.whatAnnouncerDoes();
-            }else if(Objects.equals(printTeamOut, "성우부")){
-                main.whatVoiceActorDoes();
-            }else if(Objects.equals(printTeamOut, "아웃소싱팀")){
-                main.whatOutsourcingDoes();
+            switch (printTeamOut) {
+                case "아나운서부" -> main.whatAnnouncerDoes();
+                case "성우부" -> main.whatVoiceActorDoes();
+                case "아웃소싱팀" -> main.whatOutsourcingDoes();
             }
         }
     }
